@@ -1,4 +1,7 @@
 <script setup>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
 let startTime;
 let spanWidth = window.innerWidth;
 let spanHeight = window.innerHeight;
