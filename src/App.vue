@@ -44,13 +44,18 @@ function runTrial() {
 </script>
 
 <template>
-  <h1>Reaction timer</h1>
-  <button @click="runTrial()">begin trial</button>
+  <h1 class="prevent-select">Reaction timer</h1>
+  <button class="prevent-select" @click="runTrial()">begin trial</button>
   <p></p>
-  <div id="target" @click="runTrial()"><p>._.</p></div>
+  <div id="target" @click="runTrial()" class="prevent-select"><p>._.</p></div>
 </template>
 
 <style scoped>
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 
 #target {
   display:none;
