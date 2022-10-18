@@ -14,6 +14,7 @@ function generateRandomColor() {
   }
 function moveTarget() {
   document.querySelector("#target").style = `
+  display: block;
   color: ${generateRandomColor()};
   top: ${yCoor};
   left: ${xCoor};
@@ -52,6 +53,7 @@ function runTrial() {
 <style scoped>
 
 #target {
+  display:none;
   z-index: 10;
   position: fixed;
   top: 50%;
