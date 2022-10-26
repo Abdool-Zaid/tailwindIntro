@@ -5,8 +5,8 @@ document.addEventListener('contextmenu', function(e) {
 let startTime;
 let spanWidth = window.innerWidth;
 let spanHeight = window.innerHeight;
-let xCoor = Math.round(spanWidth * Math.random()) + "px";
-let yCoor = Math.round(spanHeight * Math.random()) + "px";
+let xCoor = Math.round((spanWidth -10) * Math.random()) + "px";
+let yCoor = Math.round((spanHeight -10) * Math.random()) + "px";
 function generateRandomColor() {
   let letters = "0123456789ABCDEF";
   let color = "#";
@@ -67,5 +67,8 @@ function runTrial() {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+button{
+  margin: 1em;
 }
 </style>
